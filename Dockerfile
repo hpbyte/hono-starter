@@ -1,7 +1,7 @@
-FROM oven/bun:1.2 as base
+FROM oven/bun:1.3.7 as base
 WORKDIR /app
 
-COPY package.json bun.lockb* tsconfig.json bunfig.toml ./
+COPY package.json bun.lock tsconfig.json bunfig.toml ./
 RUN bun install
 
 COPY src ./src
